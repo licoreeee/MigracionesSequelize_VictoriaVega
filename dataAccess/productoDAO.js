@@ -12,7 +12,7 @@ class ProductoDAO {
         }
     }
 
-    async obtenerProductoPorId() { 
+    async obtenerProductos() { 
         try {
             const productos = await Producto.findAll();
             return productos;
@@ -21,7 +21,7 @@ class ProductoDAO {
         }
     }
 
-    async obtenerProductoPorId() {
+    async obtenerProductoPorId(id) {
         try {
             const producto = await Producto.findByPk(id);
             return producto;
